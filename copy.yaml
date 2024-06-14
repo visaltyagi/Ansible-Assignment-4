@@ -1,0 +1,2 @@
+- name: copying new index.html file
+  copy: src=/etc/ansible/roles/nginx/files/ dest=/var/www/html
