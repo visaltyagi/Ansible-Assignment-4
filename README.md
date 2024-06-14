@@ -14,6 +14,6 @@ Replace index.html With Original index.html file using Ansible Roles
 
 **Step 5:** Create a play4.yaml file.
 
-**Step 6:** Paste the content to install the NGINX to Slave2.
+**Step 6:** Paste the content to install the NGINX to Slave2 with new index.html file.
 
 **Step 7:** Run the play4.yaml file & the new index.html file will be successfully replaced with the old one in nginx. 
