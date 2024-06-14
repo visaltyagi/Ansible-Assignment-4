@@ -1,0 +1,6 @@
+---
+- name: installing nginx on Slave2
+  hosts: Slave2
+  become: true
+  roles:
+  - nginx
