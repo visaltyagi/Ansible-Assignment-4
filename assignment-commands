@@ -1,0 +1,30 @@
+cd /etc/ansible/roles
+ls  
+cd nginx
+pwd
+sudo nano index.html
+Index.html commands:
+<title>Hello Intellipaat</title>
+<h1>This Is a Demo File</h1>
+<p>Custom Index.html</p>
+<p>Warm Regards</p>
+cd tasks  
+ls
+sudo nano copy.yaml
+- name: copying new index.html file
+  copy: src=/etc/ansible/roles/nginx/files/ dest=/var/www/html
+ls
+-include_tasks: copy.yaml
+sudo nano main.yml
+cd ..
+ls
+sudo nano play4.yaml
+---
+- name: installing nginx on Slave2
+  hosts: Slave2
+  become: true
+  roles:
+  - nginx
+ansible-playbook play4.yaml --syntax-check
+ansible-playbook play4.yaml --check
+ansible-playbook play4.yaml
